@@ -1,0 +1,12 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Quantidade de Pokemon a ser exibida:</mat-label>
+    <input matInput placeholder="Ex. 200"
+           value="" [(ngModel)]="quantidadePokemon"
+           (ngModelChange)="quantidadePokemonDigitada()"
+           name="quantidadePokemon"
+    >
+  </mat-form-field>
+</form>
+
+

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from "./home/home.component";
-import {BuscapokemonComponent} from "./buscapokemon/buscapokemon.component";
-import {ListapokemonComponent} from "./listapokemon/listapokemon.component";
+import {HomeComponent} from "./componentes/home/home.component";
+import {BuscapokemonComponent} from "./componentes/buscapokemon/buscapokemon.component";
+import {ListapokemonComponent} from "./componentes/listapokemon/listapokemon.component";
 
 const routes: Routes = [
   //home

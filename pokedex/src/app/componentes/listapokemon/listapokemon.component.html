@@ -1,0 +1,10 @@
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile *ngFor="let i of pokemonDescribe['results']" >
+    {{i.name}}
+    <img
+      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{i.url.split('/')[6]}}.png"
+      alt="{{i.name}}">
+  </mat-grid-tile>
+
+</mat-grid-list>
+

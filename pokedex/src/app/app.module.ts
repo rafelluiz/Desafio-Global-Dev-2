@@ -4,15 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './componentes/home/home.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 
-import { BuscapokemonComponent } from './buscapokemon/buscapokemon.component';
-import { ListapokemonComponent } from './listapokemon/listapokemon.component';
+import { BuscapokemonComponent } from './componentes/buscapokemon/buscapokemon.component';
+import { ListapokemonComponent } from './componentes/listapokemon/listapokemon.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -22,17 +24,20 @@ import { ListapokemonComponent } from './listapokemon/listapokemon.component';
     BuscapokemonComponent,
     ListapokemonComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
 
-    MatToolbarModule,
-    MatIconModule,
-    MatInputModule,
-    MatGridListModule
-  ],
-  providers: [],
+
+        MatToolbarModule,
+        MatIconModule,
+        MatInputModule,
+        MatGridListModule,
+        FormsModule
+    ],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
